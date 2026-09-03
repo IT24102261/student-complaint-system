@@ -1,0 +1,276 @@
+.complaint-form-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #f5f7fb;
+}
+
+.complaint-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 7px 14px;
+
+  background: #dbeafe;
+  color: #1d4ed8;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-header h1 {
+  margin-bottom: 10px;
+
+  font-size: 35px;
+  color: #111827;
+}
+
+.form-header > p {
+  max-width: 650px;
+  margin: auto;
+
+  color: #6b7280;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   Form
+========================= */
+
+.complaint-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 22px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* =========================
+   Errors
+========================= */
+
+.error-message {
+  margin-top: 6px;
+
+  color: #dc2626;
+
+  font-size: 13px;
+}
+
+/* =========================
+   Character Counter
+========================= */
+
+.description-info {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 5px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+/* =========================
+   Priority
+========================= */
+
+.priority-options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.priority-option {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.priority-option input {
+  width: auto;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+.submit-button,
+.clear-button {
+  padding: 12px 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.submit-button {
+  background: #2563eb;
+
+  color: white;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
+}
+
+.clear-button {
+  background: #e5e7eb;
+
+  color: #374151;
+}
+
+.clear-button:hover {
+  background: #d1d5db;
+}
+
+/* =========================
+   Success Message
+========================= */
+
+.success-message {
+  margin-bottom: 25px;
+
+  padding: 20px;
+
+  background: #ecfdf5;
+
+  border: 1px solid #86efac;
+
+  border-radius: 10px;
+
+  color: #166534;
+}
+
+.success-message p {
+  margin-top: 6px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+  .complaint-form {
+    grid-template-columns: 1fr;
+
+    padding: 25px 20px;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .form-actions {
+    grid-column: auto;
+
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .clear-button {
+    width: 100%;
+  }
+
+  .form-header h1 {
+    font-size: 28px;
+  }
+}
